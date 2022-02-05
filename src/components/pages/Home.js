@@ -12,6 +12,7 @@ function Home() {
     // console.log(show);
 
     navigate("questions");
+
   };
 
   // useEffect(() => {
@@ -20,7 +21,7 @@ function Home() {
 
   return (
     <div>
- 
+      <Header/>
       <Container>
         <h2>Coding Quiz Challenge</h2>
         <p>

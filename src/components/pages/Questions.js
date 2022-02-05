@@ -6,8 +6,7 @@ import Timer from "./Timer";
 // import timeContext from '../useContext';
 import Header from "./Header";
 
-export const UserContext = createContext();
-
+export const timeContext = createContext();
 function Questions() {
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -19,7 +18,7 @@ function Questions() {
  
    const [time,setTimer]= useState(50);
 useEffect(()=>{
-  // <timeContext.Provider value={time}><Header/></timeContext.Provider>
+ 
  const interval = setInterval(() => {
      if(!stop) {setTimer((prev) => prev - 1);}
  }, 1000) ;
@@ -30,6 +29,7 @@ useEffect(()=>{
 
   return (
     <div>
+       <timeContext.Provider value={time}><Header/></timeContext.Provider>
   {/* <UserContext.Provider value={"time"}><Header/></UserContext.Provider> */}
   {/* <Timer/> */}
     Time: { stop? time: time}

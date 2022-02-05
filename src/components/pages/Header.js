@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { HeaderStyle, View, Time } from "../styles/Header.style";
 import { FaHandPointLeft } from "react-icons/fa";
 import { useState } from "react";
@@ -6,18 +6,16 @@ import { Link } from "react-router-dom";
 
 import Timer from "./Timer";
 import Question from "./Question";
-import { Children } from "react";
-import timeContext from '../useContext';
-import UserContext from '../pages/Questions'
+import timeContext from '../pages/Questions'
 // export const TimeContext= React.createContext()
 
 function Header() {
-   const time=useContext(UserContext);
+   const time=useRef(useContext(timeContext));
   // const time=useContext(UserContext);
   console.log(time)
 useEffect(()=>{
  console.log("ssdd")
-},[])
+},[time])
   return (
     <div>
       <HeaderStyle>
@@ -26,7 +24,7 @@ useEffect(()=>{
             <FaHandPointLeft size={20} />
          </Link>
          Time : 
-      {time}
+      <Timer/>
         {/* <Time>
         Time :{<Timer/>}
         </Time> */}
