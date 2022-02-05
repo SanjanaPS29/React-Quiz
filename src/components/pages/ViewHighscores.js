@@ -9,23 +9,17 @@ import { Link } from "react-router-dom";
 function ViewHighscores() {
 
 const [usernames,setUsername]= useState();
-// setUsername([
-//   {
-//     name: "san",
-//     score: 54,
-//   },
-//   {
-//     name: "san",
-//     score: 54,
-//   },
-// ]);
 
-// const setname=(name,score)=>{
-// const newInp={name:name,score:score}
-//   setUsername(...usernames,newInp)
-// }
+const clear=e=>{
+  localStorage.clear();
+  
+}
 
- 
+
+useEffect(()=>{
+const users= localStorage.getItem("users");
+setUsername(JSON.parse(users))
+},[]);
 
   return (
     <div>
@@ -41,7 +35,7 @@ const [usernames,setUsername]= useState();
         <Link to="/">
           <button>Go Back</button>
         </Link>{" "}
-        <button>Clear Highscores</button>
+        <button onClick={(e)=> clear(e)}>Clear Highscores</button>
       </Container>
     </div>
   );

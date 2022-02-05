@@ -1,10 +1,12 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect,createContext} from "react";
 import { questions } from "../../quiz";
-import { Time } from "../styles/Header.style";
 import Question from "./Question";
 import Result from "./Result";
+import Timer from "./Timer";
+// import timeContext from '../useContext';
+import Header from "./Header";
 
-
+export const UserContext = createContext();
 
 function Questions() {
   const [score, setScore] = useState(0);
@@ -17,23 +19,22 @@ function Questions() {
  
    const [time,setTimer]= useState(50);
 useEffect(()=>{
-  console.log(time)
- 
+  // <timeContext.Provider value={time}><Header/></timeContext.Provider>
  const interval = setInterval(() => {
      if(!stop) {setTimer((prev) => prev - 1);}
  }, 1000) ;
  return ()=>clearInterval(interval);
   
-     if(stop){
-      console.log("hiiii")
-  }
+  
 },[stop])
 
   return (
     <div>
+  {/* <UserContext.Provider value={"time"}><Header/></UserContext.Provider> */}
+  {/* <Timer/> */}
     Time: { stop? time: time}
       {/* <Time>Time: <Timer setStop={setStop} questionNumber={questionNumber} /> </Time> */}
-      
+    
       {stop ? (
 
         <Result highScore={score}/>

@@ -26,8 +26,7 @@ function App() {
   return (
     <Router>
     <div className="App">
- 
-  <Header/>
+    <Header/>
    <Routes>
       <Route path="highscore" element={<ViewHighscores/>} />
       <Route path="questions" element={<Questions />} />

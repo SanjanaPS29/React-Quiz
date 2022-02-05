@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  //  width: 650px;
+   width: 650px;
   // height: 260px;
-  margin: 50px 40px;
+  margin: 50px 70px;
   border: 3px solid #d5dbd6;
 
   border-radius: 25px;

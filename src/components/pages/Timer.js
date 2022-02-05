@@ -1,41 +1,24 @@
-import React from "react";
-import { useEffect } from "react";
+import React,{useContext} from "react";
+import { UserContext } from "./Questions";
+import { Time } from "../styles/Header.style";
+import Header from "./Header";
+import {useEffect} from 'react';
+function Timer() {
+  const time=useContext(UserContext);
 
-
-
-
-function Timer({time}) {
-
-
-  // const [timer, setTimer] = useState(null);
+  
   useEffect(() => {
-    //if (timer <= 0) return setStop(true);
-    // const interval = setInterval(() => {
-    //   setTimer((prev) => prev - 1);
-    // }, 2000);
 
   }, [time]);
 
-  // useEffect(() => {
-  //   setTimer(50);
-  //   console.log(timer);
-  // }, []);
-
   return (
-    // <countContext.Provider value={timer}>
-    //   <Header />
-    // </countContext.Provider>
-   <>
-   {`${time!==undefined?time:'50'}`}
+<> 
+{/* <UserContext.Provider value={time}><Header/></UserContext.Provider>  */}
+{/* <UserContext.Provider value={time}><Header/></UserContext.Provider> */}
+   {/* {`${time!==undefined?time:time}`} */}
+   {/* {`${time!==undefined?time:time}`} */}
    </>
   );
 }
 export default Timer;
 
-
-
-
-// useEffect(() => {
-//   setTimer(5000);
-//   console.log(timer);
-// }, [questionNumber]);

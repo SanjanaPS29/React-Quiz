@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "../styles/Container.style";
-import Questions from "./Questions";
+import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <div>
+ 
       <Container>
         <h2>Coding Quiz Challenge</h2>
         <p>

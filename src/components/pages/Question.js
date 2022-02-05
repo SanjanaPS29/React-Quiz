@@ -1,8 +1,6 @@
-import React, { useEffect, useState,useContext } from "react";
+import React, { useEffect, useState} from "react";
 import { Container } from "../styles/Container.style";
-import { OptionStyle, ListStyle, HiddenStyle } from "../styles/Question.style";
-import { questions } from "../../quiz";
-
+import { OptionStyle, ListStyle} from "../styles/Question.style";
 
 function Question({
   data,
@@ -18,7 +16,6 @@ function Question({
  
   const [correct, setCorrect] = useState();
   // const [stop, setStop] = useState(false);
-  const [show, setShow] = useState(true);
   const [question, setQuestion] = useState(null);
   //  const {data, setTimeout,setQuestionNumber,questionNumber} = props;
 
@@ -43,8 +40,7 @@ useEffect(()=>{
 function set(){
      setQuestionNumber((prev) => prev + 1);
         setCorrect(null);
-          console.log("cxvcvcvvc")
-        
+       
      if(data[questionNumber] == null){
       setTimer(null);
    setStop(true);
@@ -88,6 +84,7 @@ function set(){
         <hr />
         <p>{correct}</p>
       </ListStyle>
+
     </Container>
     
   );

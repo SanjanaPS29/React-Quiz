@@ -1,22 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
+// import React from 'react';
+// import { useState } from 'react';
 
 // const [time,setTimer]= useState(50)
-// const initialState={
-//    time: time,
-//    setTimer: setTimer,
-//   reduceTime:()=>{time-10}
-// }
-// //export const timeContext= React.createContext(initialState);
 
-// const UseProvider= UserContext.Provider
-// const UserConsumer= UserContext.Consumer
+//  const timeContext= React.createContext();
+//  export default timeContext;
 
-//export default timeContext;
-
-
-const userContext= React.createContext()
-
+// import React, { createContext } from "react";
+// const UserContext = createContext();
 // const CountProvider= Count.Provider
 // const CountConsumer= Count.Consumer
 
@@ -24,5 +15,3 @@ const userContext= React.createContext()
 // export default {CountProvider,CountConsumer}
 
 
-
-export default userContext;

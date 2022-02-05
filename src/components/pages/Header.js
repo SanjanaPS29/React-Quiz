@@ -7,14 +7,17 @@ import { Link } from "react-router-dom";
 import Timer from "./Timer";
 import Question from "./Question";
 import { Children } from "react";
-// import { TimerContext } from "./Questions";
-
+import timeContext from '../useContext';
+import UserContext from '../pages/Questions'
 // export const TimeContext= React.createContext()
 
 function Header() {
- // const tim=useContext(TimeContext);
-
-
+   const time=useContext(UserContext);
+  // const time=useContext(UserContext);
+  console.log(time)
+useEffect(()=>{
+ console.log("ssdd")
+},[])
   return (
     <div>
       <HeaderStyle>
@@ -22,11 +25,11 @@ function Header() {
             View HighScores
             <FaHandPointLeft size={20} />
          </Link>
-        <Time>
-          
-
-        
-        </Time>
+         Time : 
+      {time}
+        {/* <Time>
+        Time :{<Timer/>}
+        </Time> */}
         {/* <Timer  setStop={setStop} questionNumber={questionNumber}/> */}
         {/* <Timer /> */}
       </HeaderStyle>
