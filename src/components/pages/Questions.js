@@ -32,9 +32,7 @@ useEffect(()=>{
        <timeContext.Provider value={time}><Header/></timeContext.Provider>
   {/* <UserContext.Provider value={"time"}><Header/></UserContext.Provider> */}
   {/* <Timer/> */}
-    Time: { stop? time: time}
       {/* <Time>Time: <Timer setStop={setStop} questionNumber={questionNumber} /> </Time> */}
-    
       {stop ? (
 
         <Result highScore={score}/>
